@@ -5,22 +5,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="loginForm" action="/login_endpoint" method="post">
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <div class="user-type">
-                <input type="radio" id="designer" name="userType" value="designer" required>
-                <label for="designer">Designer</label>
-                <input type="radio" id="client" name="userType" value="client" required>
-                <label for="client">Client</label>
+    <div class="main">
+        <header>
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">SD</h2>
+                </div>
+            
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </header>
+
+        <!-- Login Form Starts Here -->
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm" action="/login_endpoint" method="post">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <div class="user-type">
+                    <input type="radio" id="designer" name="userType" value="designer" required>
+                    <label for="designer">Designer</label>
+                    <input type="radio" id="client" name="userType" value="client" required>
+                    <label for="client">Client</label>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <!-- Login Form Ends Here -->
+
+        <footer>
+            <div class="footer-content">
+                <h3>Contact us</h3>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+                <div class="footer-bottom">
+                    <p>copyright &copy; 2024 - Super Design</p>
+                </div>
             </div>
-            <input type="submit" value="Login">
-        </form>
+        </footer>
     </div>
     
 </body>

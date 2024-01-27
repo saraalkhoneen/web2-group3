@@ -1,14 +1,55 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+/* General Resets */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    box-sizing: border-box;
 }
 
+/* Font import */
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body, html {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #bdbec0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.icon .logo {
+    color: #30394e;
+    font-size: 35px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li {
+    padding: 0 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #575e7a;
+    font-weight: bold;
+    transition: color 0.4s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: #30394e;
+}
+
+/* Login Container Styles */
 .login-container {
     background-color: #ffffff;
     padding: 20px;
@@ -16,6 +57,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -30,19 +72,12 @@ body {
 
 input[type="email"],
 input[type="password"],
-input[type="submit"] {
+input[type="submit"],
+input[type="radio"] {
     padding: 15px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-}
-
-.user-type {
-    margin-bottom: 10px;
-}
-
-input[type="radio"] {
-    margin-right: 5px;
 }
 
 input[type="submit"] {
@@ -57,4 +92,79 @@ input[type="submit"]:hover {
 
 label {
     margin-right: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background: #a2b5c3;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials li a {
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.socials li a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials li a:hover i {
+    color: aqua;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu ul li {
+        padding: 5px 0;
+    }
+
+    .login-container {
+        margin: 20px auto;
+    }
 }
