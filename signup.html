@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up | Super Design</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="signup.js" defer></script>
+</head>
+<body>
+    
+    <div class="main">
+        <header>
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">SD</h2>
+                </div>
+            
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </header>
+
+        <!-- Sign Up Form Starts Here -->
+        <div class="signup-container">
+            <h2>Sign up</h2>
+            <!-- User Type Selection -->
+            <form id="userTypeForm">
+                <label for="designer">Interior Designer</label>
+                <input type="radio" name="userType" value="designer" id="designer">
+                <label for="client">Client</label>
+                <input type="radio" name="userType" value="client" id="client">
+            </form>
+            <!-- Designer Form -->
+            <div id="designerForm" class="user-form" style="display:none;">
+                <form action="/designer_homepage">
+                    <input type="text" name="firstName" placeholder="First Name">
+                    <input type="text" name="lastName" placeholder="Last Name">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="text" name="brandName" placeholder="Brand Name">
+                    <input type="file" name="logo" placeholder="Logo">
+                    <label>Specialty:</label>
+                    <div>
+                        <input type="checkbox" name="specialty" value="Modern"> Modern
+                        <input type="checkbox" name="specialty" value="Country"> Country
+                        <input type="checkbox" name="specialty" value="Coastal"> Coastal
+                        
+                    </div>
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+            <!-- Client Form -->
+            <div id="clientForm" class="user-form" style="display:none;">
+                <form action="/client_homepage">
+                    <input type="text" name="firstName" placeholder="First Name">
+                    <input type="text" name="lastName" placeholder="Last Name">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="submit" value="Sign Up">
+            
+                </form>
+            </div>
+        </div>
+        <!-- Sign Up Form Ends Here -->
+       
+        
+       
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Contact us</h3>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+            <div class="footer-bottom">
+                <p>copyright &copy; 2024 - Super Design</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
