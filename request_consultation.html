@@ -52,40 +52,40 @@
             <label for="colorPreferences">Color Preferences:</label>
             <input type="text" id="colorPreferences" name="colorPreferences" required>
 
+            <!-- Add date input -->
+            <label for="consultationDate">Consultation Date:</label>
+            <input type="date" id="consultationDate" name="consultationDate" required>
+
             <button type="button" onclick="submitForm()">Submit Request</button>
         </form>
 
         <!-- Thank You Message Section -->
         <div id="thankYouSection" style="display: none;">
             <h4>Thank you for your submission!</h4>
-           
         </div>
     </div>
     <script>
-   function submitForm() {
-    // Simulate form submission and save data (replace this with actual backend logic)
-    const formData = {
-        roomType: document.getElementById('roomType').value,
-        roomWidth: document.getElementById('roomWidth').value,
-        roomLength: document.getElementById('roomLength').value,
-        designCategory: document.getElementById('designCategory').value,
-        colorPreferences: document.getElementById('colorPreferences').value
-        // Add more fields as needed
-    };
+        function submitForm() {
+            // Simulate form submission and save data (replace this with actual backend logic)
+            const formData = {
+                roomType: document.getElementById('roomType').value,
+                roomWidth: document.getElementById('roomWidth').value,
+                roomLength: document.getElementById('roomLength').value,
+                designCategory: document.getElementById('designCategory').value,
+                colorPreferences: document.getElementById('colorPreferences').value,
+                consultationDate: document.getElementById('consultationDate').value
+                // Add more fields as needed
+            };
 
-    
             // Save the data to local storage
             localStorage.setItem('consultationData', JSON.stringify(formData));
 
             // Display a confirmation message (you can customize this)
-            alert(' Thank you! Form submitted successfully');
-
-}
-
+            alert('Form submitted successfully!');
 
             // Clear the form
             document.getElementById('consultationForm').reset();
-        
+        }
     </script>
     <footer>
         <div class="footer-content">
