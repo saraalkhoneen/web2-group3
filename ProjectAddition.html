@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project Addition | Super Design</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <script>
+            function redirectToDesignerHP() {
+                window.location.href = "/designer_homepage";
+            }
+        </script>
+    </head>
+    
+    <body>
+        
+        
+        <div class="main">
+            <header>
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">SD</h2>
+                </div>
+            
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                    </ul>
+                </div>
+            </div> 
+            </header>
+
+            <main class="AdditionUpdate"> 
+                <h2>Add a New Project</h2>
+                <form action="/submit_project" method="post" onsubmit="redirectToDesignerHP(); return false;">
+        
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName" required> <br><br>
+        
+                <label for="projectImage">Upload Image:</label>
+                <input type="file" id="projectImage" name="projectImage" accept="image/*" required><br><br>
+        
+
+                <label for="designCategory">Design Category:</label>
+                <select id="designCategory" name="designCategory" required>
+                    <option value="web">Web Design</option>
+                    <option value="graphic">Graphic Design</option>
+                    <option value="ui">UI/UX Design</option>
+                    <option value="other">Other</option>
+                </select> <br><br>
+
+
+                <label for="projectDescription">Project Description:</label><br>
+                <textarea id="projectDescription" name="projectDescription" rows="4" cols="50" required></textarea><br><br>
+        
+                <input type="submit" value="Add Project">
+                
+            </form>
+            </main>
+        
+
+      <footer>
+        <div class="footer-content">
+
+               <h3>Contact us</h3>
+
+               <ul class="socials">
+                <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+             </ul>
+
+       <div class=”footer-bottom”>
+        <p>copyright &copy; 2024 - Super Design  </p>
+      </div>
+
+        </div>
+      </footer>
+
+    </div>
+        </body>
+</html>
