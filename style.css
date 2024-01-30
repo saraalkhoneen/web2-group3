@@ -145,6 +145,7 @@ ul li a:hover{
     padding-left: 20px;
     margin-top: 9%;
     letter-spacing: 2px;
+    color: #fff;
 }
 
 .other{
@@ -154,7 +155,7 @@ ul li a:hover{
 }
 
 .content span{
-    color: #30394e;
+    color: #6076a8;
     font-size: 65px
 }
 
