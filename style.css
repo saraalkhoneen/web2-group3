@@ -1,82 +1,91 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
 }
 
-main{
+main {
     background-color: #f6f6f3;
     padding-left: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
-h1, h2, h3, h4, h5, h6{
-    color:#30394e;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #30394e;
 }
 
-#footer-header{
-    color:#ffffff;
+#firstName, #lastName, #brand, #speciality,#email{
+    color:#435275;
 }
 
-.main{
+#footer-header {
+    color: #ffffff;
+}
+
+.main {
     width: 100%;
     background: url(img/background.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;  
+    height: 100vh;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 75px;
     margin: 0;
     background-color: #bdbec0;
 }
 
-.icon{
+.icon {
     width: 200px;
     float: left;
     height: 70px;
 }
 
-.logo{
+.logo {
     color: #30394e;
     font-size: 35px;
     font-family: Arial;
     padding-left: 20px;
     float: left;
-    margin:9%;
+    margin: 9%;
 }
 
-.menu{
+.menu {
     width: 400px;
     float: left;
     height: 70px;
 }
 
-ul{
+ul {
     float: left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul li{
+ul li {
     list-style: none;
     margin-left: 62px;
     margin-top: 27px;
     font-size: 14px;
 }
 
-ul li a{
+ul li a {
     text-decoration: none;
     color: #575e7a;
     font-family: Arial;
@@ -84,11 +93,11 @@ ul li a{
     transition: 0.4s ease-in-out;
 }
 
-ul li a:hover{
+ul li a:hover {
     color: #30394e;
 }
 
-#addlink{
+#addlink {
     text-decoration: underline;
     color: #575e7a;
     font-family: Arial;
@@ -96,35 +105,36 @@ ul li a:hover{
     transition: 0.4s ease-in-out;
 }
 
-#addlink a:hover{
+#addlink a:hover {
     color: #30394e;
 }
 
-.tables table, td, th {
+.tables td {
     border: 1px solid;
-    padding: 2%;
     text-align: center;
-  }
-  
-.tables table {
-    width: 160%;
-    border-collapse: collapse;
-  }
+    padding: auto;
+}
 
-  .tables  th {
+.tables table {
+    border-collapse: collapse;
+}
+
+.tables th {
     border: 1px solid;
     padding: 2%;
+    width: auto;
     background-color: #30394e;
     color: #aab2cf;
-  }
+    text-align: center;
+}
 
-.signout{
+.signout {
     float: right;
     width: 400px;
     height: 70px;
 }
 
-.content{
+.content {
     width: 1200px;
     height: auto;
     margin: auto;
@@ -132,14 +142,14 @@ ul li a:hover{
     position: relative;
 }
 
-.content .par{
+.content .par {
     padding-left: 20px;
     font-family: Arial;
     letter-spacing: 1.2px;
     line-height: 30px;
 }
 
-.content h1{
+.content h1 {
     font-family: 'Times New Roman';
     font-size: 50px;
     padding-left: 20px;
@@ -148,66 +158,66 @@ ul li a:hover{
     color: #fff;
 }
 
-.other{
-    font-size:36px;
+.other {
+    font-size: 36px;
     text-align: center;
     color: #30394e;
 }
 
-.content span{
+.content span {
     color: #6076a8;
     font-size: 65px
 }
 
-.wrapper{
+.wrapper {
     width: 420px;
     background: transparent;
-    border:2px solid rgba(255,255,255,.2);
+    border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(3px);
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: #ffffff;
     border-radius: 10px;
-    padding:30px 40px;
+    padding: 30px 40px;
 }
 
-.wrapper h1{
-    font-size:36px;
+.wrapper h1 {
+    font-size: 36px;
     text-align: center;
 }
 
-.wrapper .input-box{
+.wrapper .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
 
-.input-box input{
-    width:100%;
-    height:100%;
+.input-box input {
+    width: 100%;
+    height: 100%;
     background: transparent;
-    border:none;
-    outline:none;
-    border:2px solid rgba(255,255,255,.2);
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
     font-size: 16px;
-    color:#fff;
-    padding:20px 45px 20px;
+    color: #fff;
+    padding: 20px 45px 20px;
 }
 
-.input-box input::placeholder{
-    color:#fff;
+.input-box input::placeholder {
+    color: #fff;
 }
 
-.input-box i{
-    position:absolute;
-    right:20px;
-    top:50%;
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
 }
 
-.content .cn{
+.content .cn {
     width: 180px;
     height: 60px;
     background: #ffffff;
@@ -220,56 +230,57 @@ ul li a:hover{
     transition: .4s ease;
 }
 
-.content .cn a{
+.content .cn a {
     text-decoration: none;
     color: #000;
     transition: .3s ease;
 }
 
-.cn:hover{
-    background-color: #30394e;;
+.cn:hover {
+    background-color: #30394e;
+    ;
 }
 
-.wrapper .btn{
-    width:100%;
-    height:45px;
-    background:#fff;
-    border:none;
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
     color: #4b4b4b;
-    font-weight:600;
+    font-weight: 600;
 }
 
-.wrapper .register-link{
+.wrapper .register-link {
     font-size: 14.5px;
     text-align: center;
-    margin:20px 0 15px;
+    margin: 20px 0 15px;
 }
 
-.register-link p a{
+.register-link p a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
 
-.register-link p a:hover{
+.register-link p a:hover {
     text-decoration: underline;
 }
 
-#personalinfo{
+#personalinfo {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
     margin-right: 2%;
     padding: 10px;
-    min-width: 10%;
-    max-width:20%;
-    height: auto;
+    min-width: 15%;
+    max-width: 20%;
+    height: fit-content;
     border: 1px solid #ccc;
     background-color: #212A3E;
     color: white;
@@ -283,7 +294,7 @@ ul li a:hover{
     line-height: 1.5em;
 }
 
-#personalinfo h3{
+#personalinfo h3 {
     text-align: center;
     padding: 2%;
 }
@@ -294,25 +305,25 @@ ul li a:hover{
     border-radius: 50%;
 }
 
-.headerport{
-    padding-top:4%;
-    padding-bottom:4%;
+.headerport {
+    padding-top: 4%;
+    padding-bottom: 4%;
 }
 
-#portfolio{
+#portfolio {
     text-align: center;
 }
 
-.organize{
+.organize {
     display: flex;
     flex-direction: row;
 }
 
-.tables{
+.tables {
     padding-left: 5%;
 }
 
-footer{
+footer {
     bottom: 0;
     left: 0;
     right: 0;
@@ -323,7 +334,7 @@ footer{
     color: #fff;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -331,57 +342,63 @@ footer{
     text-align: center;
 }
 
-.footer-content h3{
+.footer-content h3 {
     font-size: 2.1rem;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 3rem;
 }
 
-.socials{
+.socials {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0 3rem 0;
 }
-.socials li{
+
+.socials li {
     margin: 0 10px;
 }
-.socials a{
+
+.socials a {
     text-decoration: none;
     color: #fff;
     border: 1.1px solid white;
     padding: 5px;
     border-radius: 50%;
 }
-.socials a i{
+
+.socials a i {
     font-size: 1.1rem;
     width: 20px;
     transition: color .4s ease;
 }
-.socials a:hover i{
+
+.socials a:hover i {
     color: aqua;
 }
 
-.footer-bottom p{
+.footer-bottom p {
     float: left;
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
- }
- .footer-bottom p a{
-   color:#44bae8;
-   font-size: 16px;
-   text-decoration: none;
- }
- .footer-bottom span{
-     text-transform: uppercase;
-     opacity: .4;
-     font-weight: 200;
- }
+}
 
- .course-container {
+.footer-bottom p a {
+    color: #44bae8;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.course-container {
     display: flex;
     justify-content: space-between;
     overflow: scroll;
@@ -400,7 +417,7 @@ footer{
 .pc h2 {
     padding-bottom: 3%;
     padding-top: 3%;
-    color:#30394e;
+    color: #30394e;
 }
 
 .course {
