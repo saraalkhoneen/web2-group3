@@ -8,7 +8,6 @@
 }
 
 body{
-  
     display: flex;
     flex-direction: column; /* Align main along the column */
     justify-content: flex-start; /* Align to the start of the viewport */
@@ -159,4 +158,27 @@ footer{
  }
  
  /**************Update and Addition page **************/
- 
+
+ .AdditionUpdate{ /*almost Same as signup form*/
+    max-width: 500px;
+    margin: 2rem auto; /* This adds space above and below the signup box */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+ }
+
+ .AdditionUpdate input[type="submit"] {
+    background-color: #30394e;
+    color: white;
+    cursor: pointer;
+}
+
+.AdditionUpdate input[type="submit"]:hover {
+    background-color: #575e7a;
+}
+
+.AdditionUpdate label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
