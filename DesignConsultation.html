@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Consultation</title>
+    <link rel="stylesheet" href="style7.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <header>
+            <div class="navbar">
+                <div class="icon">
+                    <img class="logo" src="img/logo.png" alt="DecorDirect Logo">
+    
+                </div>
+            
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </header>
+        <div class="container">
+            <h2 id="titl">Design Consultation</h2> <br>
+
+            <p>Client Name: </p> <br>
+            <p>Room Type: </p> <br>
+            <p>Design Category: </p> <br>
+            <p> Dimention: </p> <br>
+            <p>Color Preferences: </p> <br>
+            <p> Date:</p> <br>
+
+
+            <!-- Design consultation form -->
+            
+        
+                <div class ="consultationText"> <strong>Consultation:</strong> </label> <br>
+                <textarea id="consultationText" name="consultationText" rows="6" cols="50" required></textarea> <br>
+                </div>
+                <!-- Image upload section -->
+                <div>
+                    <label for="designImage">Upload Design Image:</label>
+                    <input type="file" id="designImage" name="designImage" accept="image/*">
+                </div>
+
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+
+        <script>
+            // Retrieve client information from local storage
+            const clientName = localStorage.getItem('clientName');
+            const roomType = localStorage.getItem('roomType');
+            const designCategory = localStorage.getItem('designCategory');
+            const colorPreferences = localStorage.getItem('colorPreferences');
+            const length = localStorage.getItem('length');
+            const width = localStorage.getItem('width');
+
+            // Calculate dimension
+            const dimension = (length ,"X", width);
+
+            // Update the fields in the form
+            document.getElementById('clientName').innerText = `Client Name: ${clientName}`;
+            document.getElementById('roomType').innerText = `Room Type: ${roomType}`;
+            document.getElementById('designCategory').innerText = `Design Category: ${designCategory}`;
+            document.getElementById('dimntion').innerText = `Dimension: ${dimension}`;
+            document.getElementById('colorPreferences').innerText = `Color Preferences: ${colorPreferences}`;
+
+            // Get the client date
+            const clientDate = localStorage.getItem('clientDate');
+            // Update the date field
+            document.getElementById('consultationDate').value = clientDate;
+
+            function submitForm() {
+                // Simulate form submission and save data to local storage
+                const currentDate = new Date();
+                const formattedDate = currentDate.toLocaleString();
+
+                const formData = {
+                    clientName: clientName,
+                    roomType: roomType,
+                    designCategory: designCategory,
+                    dimension: dimension,
+                    colorPreferences: colorPreferences,
+                    consultationDate: formattedDate,
+                    consultationText: document.getElementById('consultationText').value,
+                };
+
+                localStorage.setItem('consultationData', JSON.stringify(formData));
+
+                alert('Thank you! Form submitted successfully.');
+
+                // Clear the form
+                document.getElementById('consultationForm').reset();
+            }
+        </script>
+          <footer>
+            <div class="footer-content">
+                <h3>Contact us</h3>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+                <div class="footer-bottom">
+                    <p>copyright &copy; 2024 - Super Design</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    </html>
+    
