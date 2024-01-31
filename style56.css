@@ -169,9 +169,14 @@ footer{
  }
 
  .AdditionUpdate input[type="submit"] {
+    text-align: center;
+    font-size: 100%;
     background-color: #30394e;
     color: white;
     cursor: pointer;
+    border: none;
+    padding: 1.5%; /* Adjust padding as needed */
+    border-radius: 3%;
 }
 
 .AdditionUpdate input[type="submit"]:hover {
