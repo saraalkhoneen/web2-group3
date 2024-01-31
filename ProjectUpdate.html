@@ -42,14 +42,15 @@
                 <form action="/submit_project" method="post" onsubmit="return redirectToDesignerHP();">
         
                 <label for="projectName">Project Name:</label>
-                <input type="text" id="projectName" name="projectName"> <br><br>
+                <input type="text" id="projectName" name="projectName" placeholder=" Home Studio"> <br><br>
         
-                <label for="projectImage">Upload Image:</label>
-                <input type="file" id="projectImage" name="projectImage" accept="image/*" ><br><br>
+                <label for="projectImage">Upload Image:</label><br>
+                <img id="preview" src="img/minimalist-office.jpg" alt="Default Image" style="max-width: 200px; max-height: 200px;"><br><br>
         
 
                 <label for="designCategory">Design Category:</label>
                 <select id="designCategory" name="designCategory">
+                    <option value="Modren">Modren</option>
                     <option value="web">Web Design</option>
                     <option value="graphic">Graphic Design</option>
                     <option value="ui">UI/UX Design</option>
@@ -58,7 +59,8 @@
 
 
                 <label for="projectDescription">Project Description:</label><br>
-                <textarea id="projectDescription" name="projectDescription" rows="4" cols="50" ></textarea><br><br>
+                <textarea id="projectDescription" name="projectDescription" rows="4" cols="50" placeholder=" Minimalist biege and black home studio"></textarea><br><br>
+
         
                 <input type="submit" value="Update Project">
                 
