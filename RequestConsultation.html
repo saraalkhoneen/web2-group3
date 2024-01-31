@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Design Consultation</title>
+    <link rel="stylesheet" href="style9.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="icon">
+                <img class="logo" src="img/logo.png" alt="DecorDirect Logo">
+
+            </div>
+        
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+    <div class="container">
+        <h2>Request Design Consultation</h2>
+        <form action="design_consultation.html" method="get">
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="livingRoom">Living Room</option>
+                <option value="bedroom">Bedroom</option>
+                <option value="kitchen">Kitchen</option>
+                <!-- Add more room types as needed -->
+            </select>
+
+            <label for="roomWidth">Room Width (meters):</label>
+            <input type="text" id="roomWidth" name="roomWidth" required>
+
+            <label for="roomLength">Room Length (meters):</label>
+            <input type="text" id="roomLength" name="roomLength" required>
+
+            <label for="designCategory">Design Category:</label>
+            <select id="designCategory" name="designCategory" required>
+                <option value="modern">Modern</option>
+                <option value="country">Country</option>
+                <option value="coastal">Coastal</option>
+            </select>
+
+            <label for="colorPreferences">Color Preferences:</label>
+            <input type="text" id="colorPreferences" name="colorPreferences" required>
+
+            <!-- Add date input -->
+            <label for="consultationDate">Consultation Date:</label>
+            <input type="date" id="consultationDate" name="consultationDate" required>
+
+            <button type="button" onclick="submitForm()">Submit Request</button>
+        </form>
+
+        <!-- Thank You Message Section -->
+        <div id="thankYouSection" style="display: none;">
+            <h4>Thank you for your submission!</h4>
+        </div>
+    </div>
+    <script>
+        function submitForm() {
+           
+            
+
+            
+            // Display a confirmation message (you can customize this)
+            alert('Form Submitted successfully!');
+
+            
+        }
+
+            // Clear the form
+            document.getElementById('consultationForm').reset();
+    </script>
+    <footer>
+    <div class="footer-content">
+        <h3>Contact us</h3>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+        <div class="footer-bottom">
+            <p>copyright &copy; 2024 - Super Design</p>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
