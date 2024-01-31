@@ -159,6 +159,10 @@ footer{
  
  /**************Update and Addition page **************/
 
+ .AdditionUpdate h2 {
+    text-align: center;
+}
+
  .AdditionUpdate{ /*almost Same as signup form*/
     max-width: 500px;
     margin: 2rem auto; /* This adds space above and below the signup box */
@@ -170,13 +174,13 @@ footer{
 
  .AdditionUpdate input[type="submit"] {
     text-align: center;
-    font-size: 100%;
+    font-size: 110%;
     background-color: #30394e;
     color: white;
     cursor: pointer;
     border: none;
-    padding: 1.5%; /* Adjust padding as needed */
-    border-radius: 3%;
+    padding: 1.8%; /* Adjust padding as needed */
+    border-radius: 4px; 
 }
 
 .AdditionUpdate input[type="submit"]:hover {
