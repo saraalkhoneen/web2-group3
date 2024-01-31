@@ -14,10 +14,8 @@
     <header>
         <div class="navbar">
             <div class="icon">
-                <img class="logo" src="img/logo.png" alt="DecorDirect Logo">
-
+                <h2 class="logo">SD</h2>
             </div>
-        
             <div class="menu">
                 <ul>
                     <li><a href="#">HOME</a></li>
@@ -25,38 +23,38 @@
                     <li><a href="#">SERVICE</a></li>
                 </ul>
             </div>
-        </div> 
+        </div>
     </header>
     <div class="container">
         <h2>Request Design Consultation</h2>
         <form action="design_consultation.html" method="get">
             <label for="roomType">Room Type:</label>
             <select id="roomType" name="roomType" required>
-                <option value="livingRoom">Living Room</option>
+                <option value="livingRoom" selected>Living Room</option>
                 <option value="bedroom">Bedroom</option>
                 <option value="kitchen">Kitchen</option>
                 <!-- Add more room types as needed -->
             </select>
 
             <label for="roomWidth">Room Width (meters):</label>
-            <input type="text" id="roomWidth" name="roomWidth" required>
+            <input type="text" id="roomWidth" name="roomWidth" value="4" required>
 
             <label for="roomLength">Room Length (meters):</label>
-            <input type="text" id="roomLength" name="roomLength" required>
+            <input type="text" id="roomLength" name="roomLength" value="5" required>
 
             <label for="designCategory">Design Category:</label>
             <select id="designCategory" name="designCategory" required>
-                <option value="modern">Modern</option>
+                <option value="modern" selected>Modern</option>
                 <option value="country">Country</option>
                 <option value="coastal">Coastal</option>
             </select>
 
             <label for="colorPreferences">Color Preferences:</label>
-            <input type="text" id="colorPreferences" name="colorPreferences" required>
+            <input type="text" id="colorPreferences" name="colorPreferences" value="beige" required>
 
             <!-- Add date input -->
             <label for="consultationDate">Consultation Date:</label>
-            <input type="date" id="consultationDate" name="consultationDate" required>
+            <input type="date" id="consultationDate" name="consultationDate" value="2024-02-09" required>
 
             <button type="button" onclick="submitForm()">Submit Request</button>
         </form>
@@ -66,36 +64,22 @@
             <h4>Thank you for your submission!</h4>
         </div>
     </div>
-    <script>
-        function submitForm() {
-           
-            
 
-            
-            // Display a confirmation message (you can customize this)
-            alert('Form Submitted successfully!');
-
-            
-        }
-
-            // Clear the form
-            document.getElementById('consultationForm').reset();
-    </script>
     <footer>
-    <div class="footer-content">
-        <h3>Contact us</h3>
-        <ul class="socials">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-        </ul>
-        <div class="footer-bottom">
-            <p>copyright &copy; 2024 - Super Design</p>
+        <div class="footer-content">
+            <h3>Contact us</h3>
+            <ul class="socials">
+                <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+            <div class="footer-bottom">
+                <p>copyright &copy; 2024 - Super Design</p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 </html>
