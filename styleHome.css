@@ -57,11 +57,12 @@ h6 {
 }
 
 .logo {
-    width: 100px; /* Adjust this value to scale the size of the logo */
-    height: auto; /* This maintains the aspect ratio of the logo */
+    color: #30394e;
+    font-size: 35px;
+    font-family: Arial;
     padding-left: 20px;
-    /* Removed the float property to better control positioning with flexbox */
-    margin: 0; 
+    float: left;
+    margin: 9%;
 }
 
 .menu {
