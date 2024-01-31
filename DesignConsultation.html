@@ -17,7 +17,6 @@
             <div class="navbar">
                 <div class="icon">
                     <img class="logo" src="img/logo.png" alt="DecorDirect Logo">
-    
                 </div>
             
                 <div class="menu">
@@ -32,66 +31,40 @@
         <div class="container">
             <h2 id="titl">Design Consultation</h2> <br>
 
-            <p>Client Name: </p> <br>
-            <p>Room Type: </p> <br>
-            <p>Design Category: </p> <br>
-            <p> Dimention: </p> <br>
-            <p>Color Preferences: </p> <br>
-            <p> Date:</p> <br>
-
+            <p>Client Name: Sarah Ahmed</p> <br>
+            <p>Room Type: Living Room</p> <br>
+            <p>Design Category: Modern</p> <br>
+            <p>Dimension: 4x5m</p> <br>
+            <p>Color Preferences: Beige</p> <br>
+            <p>Date: 9/2/2020</p> <br>
 
             <!-- Design consultation form -->
-            
-        
-                <div class ="consultationText"> <strong>Consultation:</strong> </label> <br>
+            <div class="consultationText">
+                <strong>Consultation:</strong> <br>
                 <textarea id="consultationText" name="consultationText" rows="6" cols="50" required></textarea> <br>
-                </div>
-                <!-- Image upload section -->
-                <div>
-                    <label for="designImage">Upload Design Image:</label>
-                    <input type="file" id="designImage" name="designImage" accept="image/*">
-                </div>
+            </div>
+            <!-- Image upload section -->
+            <div>
+                <label for="designImage">Upload Design Image:</label>
+                <input type="file" id="designImage" name="designImage" accept="image/*">
+            </div>
 
-                <button type="button" onclick="submitForm()">Submit</button>
-            </form>
+            <button type="button" onclick="submitForm()">Submit</button>
         </div>
 
         <script>
-            // Retrieve client information from local storage
-            const clientName = localStorage.getItem('clientName');
-            const roomType = localStorage.getItem('roomType');
-            const designCategory = localStorage.getItem('designCategory');
-            const colorPreferences = localStorage.getItem('colorPreferences');
-            const length = localStorage.getItem('length');
-            const width = localStorage.getItem('width');
-
-            // Calculate dimension
-            const dimension = (length ,"X", width);
-
-            // Update the fields in the form
-            document.getElementById('clientName').innerText = `Client Name: ${clientName}`;
-            document.getElementById('roomType').innerText = `Room Type: ${roomType}`;
-            document.getElementById('designCategory').innerText = `Design Category: ${designCategory}`;
-            document.getElementById('dimntion').innerText = `Dimension: ${dimension}`;
-            document.getElementById('colorPreferences').innerText = `Color Preferences: ${colorPreferences}`;
-
-            // Get the client date
-            const clientDate = localStorage.getItem('clientDate');
-            // Update the date field
-            document.getElementById('consultationDate').value = clientDate;
-
             function submitForm() {
                 // Simulate form submission and save data to local storage
                 const currentDate = new Date();
                 const formattedDate = currentDate.toLocaleString();
 
                 const formData = {
-                    clientName: clientName,
-                    roomType: roomType,
-                    designCategory: designCategory,
-                    dimension: dimension,
-                    colorPreferences: colorPreferences,
-                    consultationDate: formattedDate,
+                    clientName: "Sarah Ahmed",
+                    roomType: "Living Room",
+                    designCategory: "Modern",
+                    dimension: "4x5m",
+                    colorPreferences: "Beige",
+                    consultationDate: "9/2/2020",
                     consultationText: document.getElementById('consultationText').value,
                 };
 
@@ -120,5 +93,4 @@
         </footer>
     </body>
 
-    </html>
-    
+</html>
