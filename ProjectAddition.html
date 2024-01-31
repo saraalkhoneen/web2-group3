@@ -11,7 +11,8 @@
     
         <script>
             function redirectToDesignerHP() {
-                window.location.href = "/designer_homepage";
+                window.location.href = 'designerHome.html';
+                return false;
             }
         </script>
     </head>
@@ -38,7 +39,7 @@
 
             <main class="AdditionUpdate"> 
                 <h2>Add a New Project</h2>
-                <form action="/submit_project" method="post" onsubmit="redirectToDesignerHP(); return false;">
+                <form action="/submit_project" method="post" onsubmit="return redirectToDesignerHP();">
         
                 <label for="projectName">Project Name:</label>
                 <input type="text" id="projectName" name="projectName" required> <br><br>

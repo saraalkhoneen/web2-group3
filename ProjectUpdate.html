@@ -5,13 +5,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatiable" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styleHome.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
         <script>
             function redirectToDesignerHP() {
-                window.location.href = "/designer_homepage";
+                window.location.href = 'designerHome.html';
+                return false;
             }
         </script>
     </head>
@@ -38,7 +39,7 @@
 
             <main class="AdditionUpdate"> 
                 <h2>Update a Project</h2>
-                <form action="/submit_project" method="post" onsubmit="redirectToDesignerHP(); return false;">
+                <form action="/submit_project" method="post" onsubmit="return redirectToDesignerHP();">
         
                 <label for="projectName">Project Name:</label>
                 <input type="text" id="projectName" name="projectName"> <br><br>
