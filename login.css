@@ -11,7 +11,13 @@
 body, html {
     font-family: "Poppins", sans-serif;
     height: 100%;
-    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: url(img/background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Navbar Styles */
@@ -24,9 +30,13 @@ body, html {
     height: 75px;
 }
 
-.icon .logo {
-    color: #30394e;
-    font-size: 35px;
+
+.logo {
+    width: 100px; /* Adjust this value to scale the size of the logo */
+    height: auto; /* This maintains the aspect ratio of the logo */
+    padding-left: 20px;
+    /* Removed the float property to better control positioning with flexbox */
+    margin: 0; 
 }
 
 .menu ul {
@@ -48,21 +58,31 @@ body, html {
 .menu ul li a:hover {
     color: #30394e;
 }
+.user-type {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    align-items: center;
+    gap: 10px; /* Adjust the space between the items as needed */
+}
 
-/* Login Container Styles */
+/* Login Container Styles - Enhanced for Appeal */
 .login-container {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px; /* Slightly increased for better aesthetics */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Increased shadow for depth */
     width: 100%;
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 400px; /* Adjusted width */
+    margin: 5% auto; /* Centered vertically and horizontally */
     text-align: center;
+    border: 1px solid #ddd; /* Subtle border */
 }
 
 .login-container h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #30394e; /* To match the theme */
+    font-size: 28px; /* Adjusted for better visibility */
 }
 
 .login-container form {
@@ -75,29 +95,33 @@ input[type="password"],
 input[type="submit"],
 input[type="radio"] {
     padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px; /* Slightly rounded for a modern look */
+    font-size: 16px; /* Larger font for readability */
 }
 
 input[type="submit"] {
     background-color: #30394e;
     color: white;
     cursor: pointer;
+    font-weight: 600; /* Bolder for prominence */
 }
 
 input[type="submit"]:hover {
-    background-color: #575e7a;
+    background-color: #575e7a; /* Slightly lighter on hover */
 }
 
 label {
-    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: block; /* Ensuring labels appear above inputs */
 }
 
 /* Footer Styles */
 footer {
     background: #a2b5c3;
-    padding: 20px 0;
+    padding: 30px 0; /* Increased padding for a better look */
     color: #fff;
 }
 
@@ -110,35 +134,32 @@ footer {
 }
 
 .footer-content h3 {
-    font-size: 2.1rem;
+    font-size: 24px; /* Adjusted for consistency */
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased space for readability */
 }
 
 .socials {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
+    margin: 1rem 0 3rem 0;
 }
 
 .socials li {
-    margin: 0 10px;
+    margin: 0 15px; /* Increased spacing for better interaction */
 }
 
 .socials li a {
     text-decoration: none;
     color: #fff;
-    border: 1.1px solid white;
-    padding: 5px;
+    border: 1.5px solid white; /* Slightly thicker border */
+    padding: 8px; /* Increased padding for larger touch targets */
     border-radius: 50%;
-    display: inline-block;
 }
 
 .socials li a i {
-    font-size: 1.1rem;
-    transition: color .4s ease;
+    font-size: 20px; /* Larger icons for better visibility */
 }
 
 .socials li a:hover i {
@@ -146,12 +167,11 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 20px;
+    margin-top: 30px; /* Increased spacing */
 }
 
 .footer-bottom p {
-    text-transform: capitalize;
-    font-size: 14px;
+    font-size: 16px; /* Increased font size */
 }
 
 /* Responsive Styles */
@@ -165,6 +185,6 @@ footer {
     }
 
     .login-container {
-        margin: 20px auto;
+        margin: 10px auto;
     }
 }
