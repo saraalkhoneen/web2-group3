@@ -18,6 +18,20 @@ main {
     padding-bottom: 2%;
 }
 
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo {
+    width: 100px; /* Adjust this value to scale the size of the logo */
+    height: auto; /* This maintains the aspect ratio of the logo */
+    padding-left: 20px;
+    /* Removed the float property to better control positioning with flexbox */
+    margin: 0; 
+}
+
 h1,
 h2,
 h3,
@@ -27,8 +41,12 @@ h6 {
     color: #30394e;
 }
 
-#firstName, #lastName, #brand, #speciality,#email{
-    color:#435275;
+#firstName,
+#lastName,
+#brand,
+#speciality,
+#email {
+    color: #435275;
 }
 
 #footer-header {
@@ -109,23 +127,37 @@ ul li a:hover {
     color: #30394e;
 }
 
-.tables td {
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+td {
+    background-color: #f6f6f3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     border: 1px solid;
     text-align: center;
     padding: auto;
 }
 
-.tables table {
-    border-collapse: collapse;
+th,
+td {
+    border: 1px solid;
+    text-align: center;
+    padding: 25px;
 }
 
-.tables th {
+th {
+    color: white;
     border: 1px solid;
-    padding: 2%;
     width: auto;
     background-color: #30394e;
-    color: #aab2cf;
     text-align: center;
+}
+
+caption {
+    text-align: left;
 }
 
 .signout {
