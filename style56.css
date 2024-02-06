@@ -162,3 +162,25 @@ footer{
 .AdditionUpdate label {
     font-weight: bold;
 }
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 100px;
+    }
+
+    .icon {
+        height: 150%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        height: 130px;
+    }
+
+    .icon {
+        height: 130%;
+    }
+}
