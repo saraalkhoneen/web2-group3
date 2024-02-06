@@ -30,59 +30,31 @@ body{
    
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 75px;
     margin: 0;
     background-color: #bdbec0;
-}
-
-.icon{
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo {
-    width: 100px; /* Adjust this value to scale the size of the logo */
-    height: auto; /* This maintains the aspect ratio of the logo */
-    padding-left: 20px;
-    /* Removed the float property to better control positioning with flexbox */
-    margin: 0; 
-}
-
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
-}
-
-ul{
-    float: left;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px; /* Adjust the height as needed */
 }
 
-ul li{
-    list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
-    font-size: 14px;
+.icon {
+    width: auto; /* Adjusted to allow content to determine width */
+    float: left;
+    height: 200%;
+    text-align: center;
 }
 
-ul li a{
-    text-decoration: none;
-    color: #575e7a;
-    font-family: Arial;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
+.logo {
+    max-width: 100%; /* Ensure logo doesn't exceed container width */
+    max-height: 100%; /* Ensure logo doesn't exceed container height */
+    padding-left: 20px;
+    margin: 0;
 }
 
-ul li a:hover{
-    color: #30394e;
-}
 
 /* Footer */
 
