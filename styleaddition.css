@@ -1,0 +1,65 @@
+.main{
+    flex: 1; /* Allows main to expand and fill the available space */
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* New addition */
+}
+ 
+ /**************Update and Addition page **************/
+
+ .AdditionUpdate h2 {
+    text-align: center;
+}
+
+ .AdditionUpdate{ /*almost Same as signup form*/
+    max-width: 500px;
+    margin: 2rem auto; /* This adds space above and below the signup box */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+ }
+
+ .AdditionUpdate input[type="submit"] {
+    text-align: center;
+    font-size: 110%;
+    background-color: #30394e;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 1.8%; /* Adjust padding as needed */
+    border-radius: 4px; 
+}
+
+.AdditionUpdate input[type="submit"]:hover {
+    background-color: #575e7a;
+}
+
+.AdditionUpdate label {
+    font-weight: bold;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 100px;
+    }
+
+    .icon {
+        height: 150%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        height: 130px;
+    }
+
+    .icon {
+        height: 130%;
+    }
+}
