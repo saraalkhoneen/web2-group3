@@ -49,9 +49,9 @@
 
         <script>
             function submitForm() {
-                // Simulate form submission and save data to local storage
+                
                 const currentDate = new Date();
-                const formattedDate = currentDate.toLocaleString();
+                
 
                 const formData = {
                     clientName: "Sarah Ahmed",
@@ -63,7 +63,7 @@
                     consultationText: document.getElementById('consultationText').value,
                 };
 
-                localStorage.setItem('consultationData', JSON.stringify(formData));
+               
 
                 alert('Thank you! Form submitted successfully.');
 
