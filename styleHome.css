@@ -42,6 +42,7 @@ main {
     padding-left: 20px; 
     margin: 0; 
 }
+h1{text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);}
 
 h1,
 h2,
@@ -467,7 +468,15 @@ footer {
     border: 1px solid rgb(211, 211, 211);
     border-radius: 25px;
     line-height: 1.5em;
+  
+        transition: transform 0.3s ease;
+    
 }
+      .course:hover {
+        transform: translateY(-10px);
+      }
+      
+
 
 
 
@@ -500,3 +509,14 @@ footer {
 .box::-webkit-scrollbar {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+

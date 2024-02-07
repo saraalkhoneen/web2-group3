@@ -27,7 +27,7 @@
         </header>
 
             <div class="content">
-                <h1>Design <br><span>Your DREAM</span> <br></h1>
+                <h1>Design <br><span id="typed-text"></span> <br></h1>
                 <p class="par">Allow your imagination to take over, And with our help <br>
                     we will make your dreams come true! <br>
                     Join us for the BEST design services </p>
@@ -99,7 +99,49 @@
 
             </div>
         </footer>
-    
+
+
+
+         <!--scrept for typing effect -->
+        <script>
+            const typedTextSpan = document.getElementById("typed-text");
+            const textArray = ["Your DREAM", "Your Future", "Your Space"];
+            const typingDelay = 100;
+            const erasingDelay = 50;
+            const newTextDelay = 1500; // Delay between current and next text
+            let textArrayIndex = 0;
+            let charIndex = 0;
+            
+            function type() {
+              if (charIndex < textArray[textArrayIndex].length) {
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+              } else {
+                // Erase after some time
+                setTimeout(erase, newTextDelay);
+              }
+            }
+            
+            function erase() {
+              if (charIndex > 0) {
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+              } else {
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 1100);
+              }
+            }
+            
+            document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+              if (textArray.length) setTimeout(type, newTextDelay + 250);
+            });
+            </script>
+
+            <!--END OF scrept for typing effect -->
+               
 </body>
 
 </html>
