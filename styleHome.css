@@ -18,17 +18,28 @@ main {
     padding-bottom: 2%;
 }
 
-.icon{
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo {
-    width: 100px; /* Adjust this value to scale the size of the logo */
-    height: auto; /* This maintains the aspect ratio of the logo */
-    padding-left: 20px;
-    /* Removed the float property to better control positioning with flexbox */
+.navbar { 
+    width: 100%; 
+    height: 75px; 
+    margin: 0; 
+    background-color: #bdbec0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; /* Adjust the height as needed */ 
+} 
+ 
+.icon { 
+    width: auto; /* Adjusted to allow content to determine width */ 
+    float: left; 
+    height: 200%; 
+    text-align: center; 
+} 
+ 
+.logo { 
+    max-width: 100%; /* Ensure logo doesn't exceed container width */ 
+    max-height: 100%; /* Ensure logo doesn't exceed container height */ 
+    padding-left: 20px; 
     margin: 0; 
 }
 
@@ -59,28 +70,6 @@ h6 {
     background-position: center;
     background-size: cover;
     height: 100vh;
-}
-
-.navbar {
-    width: 100%;
-    height: 75px;
-    margin: 0;
-    background-color: #bdbec0;
-}
-
-.icon {
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo {
-    color: #30394e;
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    margin: 9%;
 }
 
 .menu {
@@ -164,6 +153,7 @@ caption {
     float: right;
     width: 400px;
     height: 70px;
+    padding-left: 40%;
 }
 
 .content {
