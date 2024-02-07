@@ -153,7 +153,8 @@ caption {
     float: right;
     width: 400px;
     height: 70px;
-    padding-left: 40%;
+    padding-left: 60%;
+    padding-right: 20%;
 }
 
 .content {
