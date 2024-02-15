@@ -14,19 +14,13 @@
 <body>
     <div class="main">
 
-        <header>
-            <div class="navbar">
-                <div class="icon">
-                    <img class="logo" src="img/logo.png" alt="DecorDirect Logo">
-                </div>
-            
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">SERVICE</a></li>
-                    </ul>
-                </div>
+        <header> 
+            <div class="navbar"> 
+                <div class="icon"> 
+                    <a href="index.html"> 
+                        <img class="logo" src="img/logo.png" alt="DecorDirect Logo"> 
+                    </a> 
+                </div> 
             </div> 
         </header>
         <div class="container">
@@ -55,9 +49,9 @@
 
         <script>
             function submitForm() {
-                // Simulate form submission and save data to local storage
+                
                 const currentDate = new Date();
-                const formattedDate = currentDate.toLocaleString();
+                
 
                 const formData = {
                     clientName: "Sarah Ahmed",
@@ -69,7 +63,7 @@
                     consultationText: document.getElementById('consultationText').value,
                 };
 
-                localStorage.setItem('consultationData', JSON.stringify(formData));
+               
 
                 alert('Thank you! Form submitted successfully.');
 
