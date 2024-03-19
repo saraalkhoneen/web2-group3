@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,18 +13,20 @@
 </head>
 
 <body>
-    <header> 
-        <div class="navbar"> 
-            <div class="icon"> 
-                <a href="index.html"> 
-                    <img class="logo" src="img/logo.png" alt="DecorDirect Logo"> 
-                </a> 
-            </div> 
-        </div> 
+   
+    <header>
+        <div class="navbar">
+            <div class="icon">
+                <a href="index.html">
+                    <img class="logo" src="img/logo.png" alt="DecorDirect Logo">
+                </a>
+            </div>
+        </div>
     </header>
     <div class="container">
         <h2>Request Design Consultation</h2>
-        <form action="design_consultation.html" method="get">
+        <form id="consultationForm" action="process_request.php" method="post">
+
             <label for="roomType">Room Type:</label>
             <select id="roomType" name="roomType" required>
                 <option value="livingRoom" selected>Living Room</option>
@@ -33,10 +36,10 @@
             </select>
 
             <label for="roomWidth">Room Width (meters):</label>
-            <input type="text" id="roomWidth" name="roomWidth" value="4" required>
+            <input type="text" id="roomWidth" name="roomWidth"  required>
 
             <label for="roomLength">Room Length (meters):</label>
-            <input type="text" id="roomLength" name="roomLength" value="5" required>
+            <input type="text" id="roomLength" name="roomLength" required>
 
             <label for="designCategory">Design Category:</label>
             <select id="designCategory" name="designCategory" required>
@@ -46,13 +49,13 @@
             </select>
 
             <label for="colorPreferences">Color Preferences:</label>
-            <input type="text" id="colorPreferences" name="colorPreferences" value="beige" required>
+            <input type="text" id="colorPreferences" name="colorPreferences"  required>
 
             <!-- Add date input -->
             <label for="consultationDate">Consultation Date:</label>
-            <input type="date" id="consultationDate" name="consultationDate" value="2024-02-09" required>
+            <input type="date" id="consultationDate" name="date"  required>
 
-            <button type="button" onclick="submitForm()">Submit Request</button>
+            <button type="submit">Submit Request</button>
         </form>
 
         <!-- Thank You Message Section -->
@@ -71,13 +74,20 @@
                 <li><a href=""><i class="fa fa-twitter"></i></a></li>
                 <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
             </ul>
-
-            <div class=”footer-bottom”>
-                <p>copyright &copy; 2024 - Home & Co </p>
+  
+            <div class="footer-bottom">
+                <p>copyright &copy; 2024 - Home & Co </p>
             </div>
 
         </div>
     </footer>
+
+    <script>
+        // Function to submit form
+        function submitForm() {
+            document.getElementById("consultationForm").submit();
+        }
+    </script>
 </body>
 
 </html>
