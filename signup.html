@@ -10,6 +10,18 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="SignUp.js" defer></script>
+
+    <script>
+        function redirectToSignupPage() {
+            var userType = document.querySelector('input[name="userType"]:checked').value;
+            if (userType === "designer") {
+                window.location.href = "designerHome.html";
+            } else if (userType === "client") {
+                window.location.href = "clientHomePage.html";
+            }
+        }
+    </script>
+
 </head>
 <body>
     
@@ -38,7 +50,7 @@
             </form>
             <!-- Designer Form -->
             <div id="designerForm" class="user-form" style="display:none;">
-                <form action="/designerHome.html">
+                <form form id="userTypeForm" onsubmit="redirectToSignupPage(); return false;">
                     <input type="text" name="firstName" placeholder="First Name">
                     <input type="text" name="lastName" placeholder="Last Name">
                     <input type="email" name="email" placeholder="Email Address">
@@ -57,7 +69,7 @@
             </div>
             <!-- Client Form -->
             <div id="clientForm" class="user-form" style="display:none;">
-                <form action="/ClientHomepage.html">
+                <form form id="userTypeForm" onsubmit="redirectToSignupPage(); return false;">
                     <input type="text" name="firstName" placeholder="First Name">
                     <input type="text" name="lastName" placeholder="Last Name">
                     <input type="email" name="email" placeholder="Email Address">
