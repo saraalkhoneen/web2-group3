@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="styleHome.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function redirectToPage() {
+            var userType = document.querySelector('input[name="userType"]:checked').value;
+            if (userType === "designer") {
+                window.location.href = "designerHome.html";
+            } else if (userType === "client") {
+                window.location.href = "ClientHomePage.html";
+            }
+        }
+    </script>
 </head>
 <body>
     
@@ -16,10 +26,6 @@
             <div class="navbar">
                 <div class="icon">
                     <img class="logo" src="img/logo.png" alt="DecorDirect Logo">
-
-                </div>
-            
-              
                 </div>
             </div> 
         </header>
@@ -27,7 +33,7 @@
         <!-- Login Form Starts Here -->
         <div class="login-container">
             <h2>Login</h2>
-            <form id="loginForm" action="/login_endpoint" method="post">
+            <form id="loginForm" action="javascript:void(0)" onsubmit="redirectToPage()">
                 <input type="email" name="email" placeholder="Email Address" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <div class="user-type">
@@ -52,8 +58,8 @@
                     <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
                 </ul>
     
-                <div class=”footer-bottom”>
-                    <p>copyright &copy; 2024 - Home & Co </p>
+                <div class="footer-bottom">
+                    <p>copyright &copy; 2024 - Home & Co </p>
                 </div>
     
             </div>
@@ -62,3 +68,4 @@
     
 </body>
 </html>
+
