@@ -24,7 +24,7 @@
 
                     <div class="signout">
                         <ul>
-                            <a href="logout.php">SIGN OUT</a>
+                            <li><a href="logout.php">SIGN OUT</a></li>
                         </ul>
                     </div>
                 </div>
