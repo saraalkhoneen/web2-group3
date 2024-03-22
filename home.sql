@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 09, 2024 at 11:17 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost:3306
+-- Generation Time: Mar 22, 2024 at 02:05 AM
+-- Server version: 5.7.24
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `client` (
   `lastName` varchar(50) NOT NULL,
   `emailAddress` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `client`
@@ -53,7 +53,7 @@ INSERT INTO `client` (`id`, `firstName`, `lastName`, `emailAddress`, `password`)
 CREATE TABLE `designcategory` (
   `id` int(11) NOT NULL,
   `category` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `designcategory`
@@ -75,7 +75,7 @@ CREATE TABLE `designconsultation` (
   `requestID` int(11) NOT NULL,
   `consultation` text NOT NULL,
   `consultationImgFileName` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `designconsultation`
@@ -103,16 +103,16 @@ CREATE TABLE `designconsultationrequest` (
   `colorPreferences` varchar(100) NOT NULL,
   `date` date NOT NULL,
   `statusID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `designconsultationrequest`
 --
 
 INSERT INTO `designconsultationrequest` (`id`, `ClientID`, `designerID`, `roomTypeID`, `designCategoryID`, `roomWidth`, `roomLength`, `colorPreferences`, `date`, `statusID`) VALUES
-(1, 1, 1, 1, 1, 4.50, 5.50, 'Beige', '2024-09-02', 1),
-(2, 2, 2, 2, 2, 6.20, 4.80, 'Blue', '2024-09-03', 1),
-(3, 3, 3, 3, 3, 3.90, 7.10, 'Green', '2024-09-04', 1);
+(1, 1, 1, 1, 1, '4.50', '5.50', 'Beige', '2024-09-02', 1),
+(2, 2, 2, 2, 2, '6.20', '4.80', 'Blue', '2024-09-03', 1),
+(3, 3, 3, 3, 3, '3.90', '7.10', 'Green', '2024-09-04', 1);
 
 -- --------------------------------------------------------
 
@@ -128,7 +128,7 @@ CREATE TABLE `designer` (
   `password` varchar(100) NOT NULL,
   `brandName` varchar(100) NOT NULL,
   `logoImgFileName` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `designer`
@@ -148,7 +148,7 @@ INSERT INTO `designer` (`id`, `firstName`, `lastName`, `emailAddress`, `password
 CREATE TABLE `designerspeciality` (
   `designerID` int(11) NOT NULL,
   `designCategoryID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `designerspeciality`
@@ -172,7 +172,7 @@ CREATE TABLE `designportfolioproject` (
   `projectImgFileName` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `designCategoryID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `designportfolioproject`
@@ -192,7 +192,7 @@ INSERT INTO `designportfolioproject` (`id`, `designerID`, `projectName`, `projec
 CREATE TABLE `requeststatus` (
   `id` int(11) NOT NULL,
   `status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `requeststatus`
@@ -212,7 +212,7 @@ INSERT INTO `requeststatus` (`id`, `status`) VALUES
 CREATE TABLE `roomtype` (
   `id` int(11) NOT NULL,
   `type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `roomtype`
@@ -289,6 +289,16 @@ ALTER TABLE `requeststatus`
 --
 ALTER TABLE `roomtype`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `designportfolioproject`
+--
+ALTER TABLE `designportfolioproject`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
