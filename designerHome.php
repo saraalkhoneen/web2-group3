@@ -92,7 +92,7 @@ if ($error) {
               <h1 class='headerport'>Design Portoflio</h1>";
 
         echo "<table id='Designs'>
-        <caption><a id='addlink' href='ProjectAddition.html'>Add a new Project</a></caption>
+        <caption><a id='addlink' href='ProjectAddition.php'>Add a new Project</a></caption>
         <tr>
             <th>Project Name</th>
             <th>Image</th>
@@ -117,7 +117,7 @@ if ($error) {
             $projectCategory = mysqli_fetch_assoc($categoryResult);
             $category = $projectCategory['category'];
 
-            $editLink = "ProjectUpdate.html?id=$projectId"; // Code-generated link based on project ID
+            $editLink = "ProjectUpdate.php?id=$projectId"; // Code-generated link based on project ID
             $deleteLink = "delete_project.php?project_id= $projectId"; 
             
             echo "<tr>
