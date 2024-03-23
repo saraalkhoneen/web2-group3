@@ -92,7 +92,7 @@ if ($error) {
               <h1 class='headerport'>Design Portoflio</h1>";
 
         echo "<table id='Designs'>
-        <caption><a id='addlink' href='ProjectAddition.php'>Add a new Project</a></caption>
+        <caption><a id='addlink' href='ProjectAddition.html'>Add a new Project</a></caption>
         <tr>
             <th>Project Name</th>
             <th>Image</th>
@@ -117,15 +117,16 @@ if ($error) {
             $projectCategory = mysqli_fetch_assoc($categoryResult);
             $category = $projectCategory['category'];
 
-            $editLink = "ProjectUpdate.php?id=$projectId"; // Code-generated link based on project ID
-
+            $editLink = "ProjectUpdate.html?id=$projectId"; // Code-generated link based on project ID
+            $deleteLink = "delete_project.php?project_id= $projectId"; 
+            
             echo "<tr>
             <td>$projectName</td>
             <td><img height='100%' width='100%' src='$projectImgFileName'></td>
             <td>$category</td>
             <td>$description</td>
             <td><a href='$editLink'>Edit</a></td>
-            <td><a href='delete_project.php?project_id=<?php echo $projectId; ?>'>Delete</a></td>
+            <td><a href='$deleteLink'>Delete</a></td>
           </tr>";
         }
 
@@ -159,7 +160,7 @@ if ($error) {
             $query = "SELECT * FROM client WHERE id='$ClientID'";
             $result = mysqli_query($connection, $query);
             $row = mysqli_fetch_assoc($result);
-            $clientname = $row['firstName'] + ' ' + $row['lastName'];
+            $clientname = $row['firstName'] . ' ' . $row['lastName'];
 
             $query = "SELECT * FROM roomtype WHERE id='$roomTypeID'";
             $result = mysqli_query($connection, $query);

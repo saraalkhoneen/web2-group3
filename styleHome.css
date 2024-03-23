@@ -1,3 +1,12 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Mar 10, 2024, 8:05:23 PM
+    Author     : arwa_
+*/
+
 @import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
@@ -509,14 +518,3 @@ footer {
 .box::-webkit-scrollbar {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
