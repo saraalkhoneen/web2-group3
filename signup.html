@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatiable" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="SignUp.css">
+    <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="styleHome.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="SignUp.js" defer></script>
+    <script src="signup.js" defer></script>
 
     <script>
         function redirectToSignupPage() {
@@ -21,6 +21,7 @@
             }
         }
     </script>
+
 
 </head>
 <body>
@@ -44,19 +45,20 @@
             <!-- User Type Selection -->
             <form id="userTypeForm">
                 <label for="designer">Interior Designer</label>
-                <input type="radio" name="userType" value="designer" id="designer">
+                <input type="radio" name="userType"  value="designer" id="designer">
                 <label for="client">Client</label>
-                <input type="radio" name="userType" value="client" id="client">
+                <input type="radio" name="userType"  value="client" id="client">
             </form>
             <!-- Designer Form -->
             <div id="designerForm" class="user-form" style="display:none;">
-                <form form id="userTypeForm" onsubmit="redirectToSignupPage(); return false;">
-                    <input type="text" name="firstName" placeholder="First Name">
-                    <input type="text" name="lastName" placeholder="Last Name">
-                    <input type="email" name="email" placeholder="Email Address">
-                    <input type="password" name="password" placeholder="Password">
-                    <input type="text" name="brandName" placeholder="Brand Name">
-                    <input type="file" name="logo" placeholder="Logo">
+                 <p id="msg"></p>
+             <form  enctype="multipart/form-data" method="post"  id="designer_Form" name="designer_Form">
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                    <input type="email" name="email" id="email" placeholder="Email Address">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="text" name="brandName" id="brandName" placeholder="Brand Name">
+                    <input type="file" name="logo" id="logo" placeholder="Logo">
                     <label>Specialty:</label>
                     <div>
                         <input type="checkbox" name="specialty" value="Modern"> Modern
@@ -64,20 +66,26 @@
                         <input type="checkbox" name="specialty" value="Coastal"> Coastal
                         
                     </div>
-                    <input type="submit" value="Sign Up">
+                    <input type="submit" name="designer" value="Sign Up">
+                     <span class="submitting"></span>
                 </form>
+                
             </div>
             <!-- Client Form -->
             <div id="clientForm" class="user-form" style="display:none;">
-                <form form id="userTypeForm" onsubmit="redirectToSignupPage(); return false;">
-                    <input type="text" name="firstName" placeholder="First Name">
-                    <input type="text" name="lastName" placeholder="Last Name">
-                    <input type="email" name="email" placeholder="Email Address">
-                    <input type="password" name="password" placeholder="Password">
+                <form   method="post"  id="client_Form" name="client_Form">
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                    <input type="email" name="email" id="email" placeholder="Email Address">
+                    <input type="password" name="password" id="password" placeholder="Password">
                     <input type="submit" value="Sign Up">
-            
+                 <span class="submitting"></span>
                 </form>
             </div>
+             <div id="form-message-warning "></div> 
+                <div id="form-message-success">
+                 Thank you! successfully registered
+                 </div>
         </div>
         <!-- Sign Up Form Ends Here -->
        
@@ -101,5 +109,8 @@
 
         </div>
     </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
