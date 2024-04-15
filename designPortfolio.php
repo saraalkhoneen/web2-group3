@@ -11,7 +11,7 @@
 <body>
     <?php
     session_start();
-    include 'db_connect.php'; // Assumes you have a db_connect.php file with your database connection details
+    include 'db_connect.php';
 
     // Check if the user is logged in and is a designer
     if (!isset($_SESSION['designer_id'])) {
@@ -59,7 +59,6 @@
                     <h1><?php echo $designer['brandName']; ?></h1>
                     <h3>Interior Designer</h3>
                     <div class="social-media">
-                        <!-- Social Media Icons, if applicable -->
                     </div>
                     <p>
                         <?php echo $designer['description']; ?>
@@ -71,7 +70,6 @@
                 </div>
             </div>
 
-            <!-- Additional pages for portfolio content -->
         </div>
     </div>
 
@@ -87,7 +85,6 @@
         </div>
     </footer>
 
-    <!-- Include your JavaScript file for interactivity -->
     <script src="PortofolioJS.js"></script>
 </body>
 </html>
